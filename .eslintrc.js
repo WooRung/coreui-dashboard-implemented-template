@@ -1,26 +1,41 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2020: true,
-  },
-  extends: [
-    "airbnb",
-    "airbnb/hooks",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:prettier/recommended",
-    "plugin:eslint/recommended",
-    "prettier",
-  ],
-  rules: {
-    "react/prop-types": 0,
-    "no-extra-semi": "error",
-    "react/jsx-filename-extension": [1, { extensions: ["js", "jsx"] }],
-    "arrow-parens": ["warn", "as-needed"],
-    "no-unused-vars": ["off"],
-    "no-console": ["off"],
-    "import/prefer-default-export": ["off"],
-    "react-hooks/exhaustive-deps": ["warn"],
-    "react/jsx-props-no-spreading": [1, { custom: "ignore" }],
-  },
+	env: {
+		browser: true,
+		es2021: true,
+		node: true,
+		jest: true,
+	},
+	extends: [
+		"react-app",
+		"react-app/jest",
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"prettier",
+		"plugin:prettier/recommended",
+	],
+	parserOptions: {
+		ecmaFeatures: {
+			jsx: true,
+		},
+		ecmaVersion: 12,
+	},
+	plugins: ["react", "prettier"],
+	rules: {
+		"react/jsx-filename-extension": [1, { extensions: ["js", "jsx"] }],
+		"prettier/prettier": "warn",
+		"no-param-reassign": 0,
+		"arrow-parens": 0,
+		"max-len": [
+			"error",
+			{
+				code: 120,
+			},
+		],
+		"comma-dangle": 0,
+		"object-curly-newline": 0,
+		"no-unused-vars": "warn",
+		"react-hooks/exhaustive-deps": ["warn"],
+		"react/jsx-props-no-spreading": [1, { custom: "ignore" }],
+		"react/react-in-jsx-scope": 0,
+	},
 };
