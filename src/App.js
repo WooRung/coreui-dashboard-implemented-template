@@ -1,7 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { useDispatch, useSelector } from "react-redux";
 
 function App() {
+	// const count = useSelector(state => state.ui);
+	// const dispatch = useDispatch();
+	// console.log(count);
+
 	return (
 		<div className="App">
 			<header className="App-header">
