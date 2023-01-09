@@ -1,4 +1,5 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { todosReducer } from "./reducer";
 
 // import { createStore } from "redux";
 
