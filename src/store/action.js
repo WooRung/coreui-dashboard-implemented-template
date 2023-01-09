@@ -1,7 +1,7 @@
-import { uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 
-const ADD_TODO = "ADD_TODO";
-const TODO_TOGGLED = "TODO_TOGGLED";
+export const ADD_TODO = "ADD_TODO";
+export const TODO_TOGGLED = "TODO_TOGGLED";
 
 export const addTodo = text => ({
 	type: ADD_TODO,
